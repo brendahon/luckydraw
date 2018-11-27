@@ -1,0 +1,34 @@
+<h1>Lucky Draw</h1>
+
+<form [formGroup]="drawForm" (ngSubmit)="onSubmit()">
+
+    <h5>{{ this.message }}</h5>
+
+    <label>
+      <input type="hidden" formControlName="name">
+    </label>
+  
+    <label>
+      <input type="hidden" formControlName="email">
+
+    </label>
+
+    <input type="submit" value="Draw" class="cta">
+  
+  </form>
+
+  <ngx-spinner
+    bdColor="rgba(0,103,62, 1)"
+    size="large"
+    color="#ff0000"
+    type="square-jelly-box">
+    <p style="font-size: 20px; color: white">Loading...</p>
+  </ngx-spinner>
+
+  <div *ngIf="success" class="results">
+    <strong>Name:</strong> 
+    <span>{{ drawForm.controls.name.value }}</span>
+
+    <strong>Email:</strong> 
+    <span>{{ drawForm.controls.email.value }}</span>
+  </div>
