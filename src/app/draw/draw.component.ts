@@ -37,7 +37,9 @@ export class DrawComponent implements OnInit {
       console.log("user retrieved: " + this.user);
 
       if(!this.user) {
-        this.message = "No user!";
+        this.drawForm.controls.name.setValue("");
+        this.drawForm.controls.email.setValue("");
+        this.message = "No user is drawn!";
         console.log("draw message for null user: " + this.message);
       }
       else if(this.user.draw) {
@@ -46,6 +48,8 @@ export class DrawComponent implements OnInit {
         this.message = "Congratulations!";
         this.success = true;
       } else {
+        this.drawForm.controls.name.setValue("");
+        this.drawForm.controls.email.setValue("");
         this.message = "No user is drawn!";
       }
 
