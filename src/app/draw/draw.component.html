@@ -1,20 +1,21 @@
-<h1>Lucky Draw</h1>
+<div align="center">
+  <h1>Lucky Draw</h1>
 
-<form [formGroup]="drawForm" (ngSubmit)="onSubmit()">
+  <br/> <br />
 
-    <h5>{{ this.message }}</h5>
+  <form [formGroup]="drawForm" (ngSubmit)="onSubmit()">
 
     <label>
       <input type="hidden" formControlName="name">
     </label>
-  
+
     <label>
       <input type="hidden" formControlName="email">
 
     </label>
 
     <input type="submit" value="Draw" class="cta">
-  
+    
   </form>
 
   <ngx-spinner
@@ -25,10 +26,15 @@
     <p style="font-size: 20px; color: white">Loading...</p>
   </ngx-spinner>
 
-  <div *ngIf="success" class="results">
-    <strong>Name:</strong> 
-    <span>{{ drawForm.controls.name.value }}</span>
+  <br/> <br />
 
-    <strong>Email:</strong> 
-    <span>{{ drawForm.controls.email.value }}</span>
+  <h5 style="color: #00673e;">{{ this.message }}</h5>
+
+  <div *ngIf="success" class="results">
+    <!--strong>Name:</strong--> 
+    <span><strong>{{ drawForm.controls.name.value }}</strong></span>
+
+    <!--strong>Email:</strong> 
+    <span>{{ drawForm.controls.email.value }}</span -->
   </div>
+</div>
