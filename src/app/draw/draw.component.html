@@ -1,5 +1,5 @@
-<div align="center">
-  <h1>Lucky Draw</h1>
+<div align="center" class="draw">
+  <h1 class="headline"><strong>Christmas Lucky Draw</strong></h1>
 
   <br/> <br />
 
@@ -14,7 +14,7 @@
 
     </label>
 
-    <input type="submit" value="Draw" class="cta">
+    <input type="submit" value="Click to draw" class="cta">
     
   </form>
 
@@ -28,11 +28,11 @@
 
   <br/> <br />
 
-  <h5 style="color: #00673e;">{{ this.message }}</h5>
+  <h5 style="color: #8c370f;"><strong>{{ this.message }}</strong></h5>
 
   <div *ngIf="success" class="results">
     <!--strong>Name:</strong--> 
-    <span><strong>{{ drawForm.controls.name.value }}</strong></span>
+    <h1 class="winner"><strong>{{ drawForm.controls.name.value }}</strong></h1>
 
     <!--strong>Email:</strong> 
     <span>{{ drawForm.controls.email.value }}</span -->

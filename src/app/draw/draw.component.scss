@@ -1,3 +1,53 @@
+
+.headline {
+    margin-bottom: .5em;
+    color: #b81313;
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 0 .05em .1em #fff;
+    animation-iteration-count: infinite;
+    animation-duration: 3.5s;
+  }
+
+  @keyframes hover {
+    0% {
+      transform: translate3d(0, 0, 0);
+      color: #8c370f;
+    }
+    50% {
+      transform: translate3d(0, -0.2em, 0);
+      color: #8c370f;
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+      color: #8c370f;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      box-shadow: 0px 0px 0.3em rgba(255, 255, 255, 0.8);
+    }
+    50% {
+      box-shadow: 0px 0px 0.3em rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      box-shadow: 0px 0px 0.3em rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .winner {
+    margin-bottom: .5em;
+    color: #8c370f;
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 0 .05em .1em #fff;
+    animation-name: hover;
+    animation-iteration-count: infinite;
+    animation-duration: 3.5s;
+  }
+
 label {
     display: block;
     
@@ -24,10 +74,11 @@ label {
     color: white;
 
     text-transform: uppercase;
-    border-radius: 4px;
+    border-radius: 100px;
     padding: 1em;
     cursor: pointer;
-    font-family: 'Montserrat';
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 1.5em;
 }
 
 .results {
