@@ -18,10 +18,12 @@ userRoutes.route('/add').post(function (req, res) {
 });
 
 userRoutes.route('/draw').get(function (req, res) {
-  User.count().exec(function (err, count) {
+  User.count({draw: null}).exec(function (err, count) {
 
     // Get a random entry
-    var random = Math.floor(Math.random() * count)
+    var random = Math.floor(Math.random() * count);
+
+    console.log("random = " + random + ", count=" + count);
   
     // Again query all users but only fetch one offset by our random #
     User.findOne({draw: null}).skip(random).exec(

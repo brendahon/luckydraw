@@ -13,15 +13,15 @@
   @keyframes hover {
     0% {
       transform: translate3d(0, 0, 0);
-      color: #8c370f;
+      color: #0000C1;
     }
     50% {
       transform: translate3d(0, -0.2em, 0);
-      color: #8c370f;
+      color: #0000C1;
     }
     100% {
       transform: translate3d(0, 0, 0);
-      color: #8c370f;
+      color: #0000C1;
     }
   }
   @keyframes pulse {
@@ -38,7 +38,7 @@
 
   .winner {
     margin-bottom: .5em;
-    color: #8c370f;
+    color: #0000C1;
     font-family: 'Berkshire Swash', cursive;
     font-weight: bolder;
     text-align: center;
@@ -69,7 +69,7 @@ label {
 }
 
 .cta {
-    background: #00673e;
+    background: #00A758;
     border: none;
     color: white;
 

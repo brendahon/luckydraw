@@ -39,7 +39,7 @@ export class DrawComponent implements OnInit {
       if(!this.user) {
         this.drawForm.controls.name.setValue("");
         this.drawForm.controls.email.setValue("");
-        this.message = "No user is drawn!";
+        this.message = "No one is drawn!";
         console.log("draw message for null user: " + this.message);
       }
       else if(this.user.draw) {
@@ -50,7 +50,7 @@ export class DrawComponent implements OnInit {
       } else {
         this.drawForm.controls.name.setValue("");
         this.drawForm.controls.email.setValue("");
-        this.message = "No user is drawn!";
+        this.message = "No one is drawn!";
       }
 
       console.log("draw message: " + this.message);
